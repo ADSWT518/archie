@@ -17,7 +17,7 @@
   </div>
 </footer>
 
-当前页阅读量为: <span class="waline-pageview-count"/>
+当前页阅读量为: <span class="waline-pageview-count", data-path="{{ .RelPermalink}}"/></span>
 
 {{ if not .Site.IsServer }}
 {{ template "_internal/google_analytics_async.html" . }}
