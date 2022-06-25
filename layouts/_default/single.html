@@ -21,6 +21,20 @@
 			{{ .Content }}
 		</section>
 
+		<div id="waline"></div>
+		<script>
+			Waline.init({
+				el: '#waline',
+				serverURL: 'https://comments.tangda.me/',
+				emoji: [
+					'https://unpkg.com/@waline/emojis@1.0.1/qq',
+					'https://unpkg.com/@waline/emojis@1.0.1/tw-emoji',
+				],
+				pageview: true,
+				dark: 'html[theme="dark"]',
+			});
+		</script>
+
 		<div class="post-tags">
 			{{ if ne .Type "page" }}
 			{{ if gt .Params.tags 0 }}
